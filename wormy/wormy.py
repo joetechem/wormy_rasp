@@ -10,9 +10,9 @@ from pygame.locals import *
 # SETTING GAME SPEED, WINDOW SIZE, CELL SIZE
 
 ##### BEGIN PART ONE ####
-FPS = 15
-WINDOWWIDTH = 640
-WINDOWHEIGHT = 480
+
+
+
 #### END PART ONE ####
 
 CELLSIZE = 20
@@ -30,7 +30,7 @@ DARKGREEN = (  0, 155,   0)
 DARKGRAY  = ( 40,  40,  40)
 
 #### BEGIN PART TWO ####
-BGCOLOR = BLACK
+
 #### END PART TWO ####
 
 
@@ -113,14 +113,14 @@ def runGame():
 # DRAWING TO THE SCREEN
 
 #### BEGIN PART THREE ####
-        wormCoords.insert(0, newHead)
-        DISPLAYSURF.fill(BGCOLOR)
-        drawGrid()
-        drawWorm(wormCoords)
-        drawApple(apple)
-        drawScore(len(wormCoords) - 3)
-        pygame.display.update()
-        FPSCLOCK.tick(FPS)
+        
+        
+        
+        
+        
+        
+        
+        
 #### END PART THREE ####
 
 def drawPressKeyMsg():
@@ -144,9 +144,9 @@ def checkForKeyPress():
 
 #### BEGIN PART FOUR ####
 def showStartScreen():
-    titleFont = pygame.font.Font('freesansbold.ttf', 100)
-    titleSurf1 = titleFont.render('Wormy!', True, WHITE, DARKGREEN)
-    titleSurf2 = titleFont.render('Wormy!', True, GREEN)
+    
+    
+    
 #### END PART FOUR ####
 
     degrees1 = 0
