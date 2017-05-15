@@ -7,6 +7,7 @@
 import random, pygame, sys
 from pygame.locals import *
 
+# SETTING GAME SPEED, WINDOW SIZE, CELL SIZE
 FPS = 15
 WINDOWWIDTH = 640
 WINDOWHEIGHT = 480
@@ -46,7 +47,7 @@ def main():
         runGame()
         showGameOverScreen()
 
-
+# THE GAME LOOP
 def runGame():
     # Set a random start point.
     startx = random.randint(5, CELLWIDTH - 6)
@@ -59,6 +60,7 @@ def runGame():
     # Start the apple in a random place.
     apple = getRandomLocation()
 
+    # HANDLING KEYBOARD PRESSES
     while True: # main game loop
         for event in pygame.event.get(): # event handling loop
             if event.type == QUIT:
@@ -75,6 +77,7 @@ def runGame():
                 elif event.key == K_ESCAPE:
                     terminate()
 
+        # COLLISON DETECTION
         # check if the worm has hit itself or the edge
         if wormCoords[HEAD]['x'] == -1 or wormCoords[HEAD]['x'] == CELLWIDTH or wormCoords[HEAD]['y'] == -1 or wormCoords[HEAD]['y'] == CELLHEIGHT:
             return # game over
